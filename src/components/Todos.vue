@@ -2,7 +2,10 @@
   <div>
     <h3>Todos</h3>
     <div class="todos">
-      <div :key="todo.id" v-for="todo in allTodos" class="todo">{{todo.title}}</div>
+      <div :key="todo.id" v-for="todo in allTodos" class="todo">
+        {{todo.title}}
+        <i class="fas fa-trash-alt"></i>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +38,14 @@ export default {
   border-radius: 5px;
   text-align: center;
   position: relative;
+  cursor: pointer;
+}
+
+i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
   cursor: pointer;
 }
 </style>
